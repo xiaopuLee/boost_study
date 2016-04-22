@@ -32,5 +32,5 @@ int main(int argc, char** argv)
 	{
 		std::cout << bad_cast.what() << std::endl;
 	}
-		
+	return 0;
 }
