@@ -10,6 +10,7 @@ int main(int argc, char** argv)
 {
 	int num = 0;
 	string str = "";
+	const char a[10] = "01111111";
 	try
 	{
 		std::cout << "converting int to string" << std::endl;
@@ -27,6 +28,11 @@ int main(int argc, char** argv)
 		//pay attention to below, the first argument is the
 		num = lexical_cast<int>(str.data(), 3);
 		std::cout << "  current num " << num << std::endl;
+
+		//throw an bad_lexical_cast exception here
+		std::cout << "converting char arrary to int" << std::endl;
+		num = lexical_cast<int>(a, 10);
+		std::cout << num << std::endl;
 	}
 	catch(const bad_lexical_cast& bad_cast)
 	{
